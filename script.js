@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Toggle abonnement 6 / 12 mois ---------- */
   const toggleBtns = document.querySelectorAll('.toggle-btn');
   const subPrice = document.getElementById('subPrice');
-  const prices = { '12': '62,5€', '6': '70€' };
+  const prices = { '12': '62,5€', '6': '69€' };
 
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
