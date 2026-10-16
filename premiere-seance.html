@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ta première séance à 70 € — Auroé Massage, Signes (83)</title>
+<meta name="description" content="Nouveau à Signes : ta première séance de massage chez Auroé Massage, Mode Découverte 1h à 70 €. Réservation en ligne sur Planity.">
+<!-- Page réservée aux publicités Meta : ne pas indexer -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Gloock&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/logo-auroe-monogram-dark.png">
+
+<style>
+/* ==========================================================================
+   PREMIÈRE SÉANCE — landing pubs Meta
+   Réutilise les tokens et composants de style.css, en version plus chaude
+   (crème, sable, pêche) pour l'ambiance cocon.
+   ========================================================================== */
+body{ background:var(--creme-deep); overflow-x:clip; }
+
+.lp-header{
+  background:var(--blanc-casse);
+  border-bottom:1px solid rgba(43,38,32,0.06);
+  padding:12px 24px;
+  display:flex; justify-content:center;
+}
+.lp-header img{ height:48px; width:auto; }
+
+/* Séparateur féérique */
+.lp-sep{
+  text-align:center;
+  font-size:18px;
+  color:var(--peche-deep);
+  letter-spacing:14px;
+  padding:0;
+  margin:0;
+  line-height:1;
+}
+
+/* Hero */
+.lp-hero{
+  padding:48px 20px 64px;
+  background:linear-gradient(170deg, var(--peche-wash) 0%, var(--creme-deep) 55%, var(--sable) 100%);
+  position:relative;
+}
+.lp-hero-inner{
+  max-width:var(--maxw); margin:0 auto;
+  display:grid; grid-template-columns:1.25fr 0.75fr; gap:56px; align-items:center;
+}
+.lp-hero .eyebrow-hand{ color:var(--sauge-fonce); font-size:18px; }
+.lp-hero h1{ font-size:clamp(28px,4.2vw,46px); }
+.lp-hero h1 .pill-highlight{ margin-top:6px; }
+.lp-hero-sub{
+  font-family:'Poppins', sans-serif;
+  font-weight:600;
+  font-size:clamp(17px,2.2vw,20px);
+  color:var(--sauge-deep2);
+  margin:18px 0 8px;
+}
+.lp-hero-text{ font-size:17px; color:var(--encre-soft); max-width:500px; }
+.lp-hero .btn{ margin-top:12px; }
+.lp-hero .ph-hero{ aspect-ratio:4/5; transform:rotate(1.5deg); }
+
+/* Boutons : cibles tactiles confortables */
+.lp .btn{ min-height:52px; white-space:normal; text-align:center; }
+.lp .btn-block-mobile{ width:auto; }
+
+/* Sections */
+.lp-section{ padding:72px 20px; }
+.lp-section .section-head{ margin-bottom:36px; }
+.lp-reconnais{ background:var(--blanc-casse); }
+.lp-reconnais .problemes-grid{ grid-template-columns:repeat(2,1fr); max-width:860px; }
+.lp-reconnais .section-head .ink-sauge::after{ border-color:var(--peche-deep); }
+
+/* Offre Mode Découverte */
+.lp-offre{ background:var(--peche-wash); }
+.lp-offre-card{
+  max-width:720px; margin:0 auto;
+  background:var(--blanc-casse);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  padding:16px;
+  display:grid; grid-template-columns:0.9fr 1.1fr; gap:24px; align-items:center;
+  position:relative;
+}
+.lp-offre-card::before{
+  content:"";
+  position:absolute; inset:-12px;
+  border:2px dashed var(--peche-deep);
+  border-radius:36px;
+  transform:rotate(-1deg);
+  pointer-events:none;
+}
+.lp-offre-card .ph-photo{ aspect-ratio:4/5; }
+.lp-offre-body{ padding:8px 12px 12px 0; }
+.lp-offre-body h2{ font-size:clamp(24px,3.2vw,30px); margin-bottom:6px; }
+.lp-offre-price{
+  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  margin:4px 0 14px;
+}
+.lp-offre-price .offre-price{ font-size:34px; color:var(--sauge-deep2); }
+.lp-offre-price .offre-meta{ margin:0; }
+.lp-offre-body .offre-desc{ font-size:16px; }
+.lp-offre-body .offre-sticker{ position:static; display:inline-block; margin-bottom:14px; font-size:13px; padding:8px 14px; }
+
+/* Étapes */
+.lp-etapes{ background:var(--creme-deep); }
+.lp-steps{
+  max-width:var(--maxw); margin:0 auto;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  counter-reset:step;
+}
+.lp-step{
+  background:var(--blanc-casse);
+  border-radius:var(--radius-md);
+  padding:28px 24px;
+  box-shadow:var(--shadow-card);
+  position:relative;
+}
+.lp-step-num{
+  width:44px; height:44px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Poppins', sans-serif; font-weight:700; font-size:17px;
+  margin-bottom:14px;
+}
+.lp-step:nth-child(1) .lp-step-num{ background:var(--peche); }
+.lp-step:nth-child(2) .lp-step-num{ background:var(--sable); }
+.lp-step:nth-child(3) .lp-step-num{ background:var(--sauge-pastel); }
+.lp-step h3{ font-size:18px; margin-bottom:6px; }
+.lp-step p{ font-size:15px; color:var(--encre-soft); margin:0; }
+
+/* Eva */
+.lp-eva{ background:var(--sable); }
+.lp-eva-photos{ display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; max-width:420px; }
+.lp-eva-photos .ph-photo{ aspect-ratio:3/4; }
+.lp-eva-photos .ph-photo:first-child{ transform:rotate(-2deg); }
+.lp-eva-photos .ph-photo:last-child{ transform:rotate(2deg) translateY(24px); }
+.lp-eva-photos .ph-photo:not(.has-photo)::before{ left:10px; right:10px; bottom:12px; text-align:center; white-space:normal; line-height:1.4; }
+.lp-eva .praticienne-text{ margin-top:24px; }
+
+/* Avis */
+.lp-avis{ background:var(--blanc-casse); }
+.lp-avis .tc-1{ background:var(--peche-wash); }
+.lp-avis .tc-2{ background:var(--sable); }
+.lp-avis .tc-3{ background:var(--terracotta-pastel); }
+
+/* FAQ */
+.lp-faq{ background:var(--creme-deep); }
+.lp-faq .faq-question{ min-height:56px; }
+.lp-faq .faq-question:hover{ background:var(--peche-wash); }
+.lp-todo{
+  display:inline-block;
+  background:#FFE58F;
+  color:var(--encre);
+  font-weight:600;
+  padding:2px 8px;
+  border-radius:6px;
+}
+
+/* CTA final */
+.lp-final{
+  background:linear-gradient(160deg, var(--peche) 0%, var(--peche-wash) 60%, var(--creme-deep) 100%);
+  text-align:center;
+}
+.lp-final .cta-final-inner{ max-width:620px; margin:0 auto; }
+.lp-final h2{ font-size:clamp(30px,4vw,44px); }
+.lp-final-offer{ font-size:17px; color:var(--encre-soft); margin-bottom:26px; }
+.lp-final-offer strong{ color:var(--encre); font-weight:600; }
+.lp-contact{
+  display:flex; justify-content:center; gap:12px; flex-wrap:wrap;
+  margin-top:28px;
+}
+.lp-contact .btn{ background:var(--blanc-casse); }
+.lp-zone{ font-size:14px; color:var(--encre-soft); margin:22px 0 0; }
+
+/* Footer */
+.lp-footer-links{
+  display:flex; justify-content:center; gap:6px 18px; flex-wrap:wrap;
+  margin-top:14px; font-size:13px;
+}
+.lp-footer-links a, .lp-footer-links button{
+  color:var(--encre-soft);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  font-size:13px;
+  padding:12px 4px;
+  min-height:44px;
+}
+
+/* Bouton collant mobile */
+.lp-sticky{
+  position:fixed; left:0; right:0; bottom:0;
+  z-index:90;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(254,252,247,0.94);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(43,38,32,0.08);
+  box-shadow:0 -8px 24px rgba(32,31,43,0.06);
+  display:none;
+  transform:translateY(110%);
+  transition:transform .3s ease;
+}
+.lp-sticky.is-shown{ transform:translateY(0); }
+.lp-sticky .btn{ width:100%; }
+.lp-sticky small{ display:block; text-align:center; font-size:12px; color:var(--encre-soft); margin-top:4px; }
+
+/* Responsive */
+@media (max-width:980px){
+  .lp-hero-inner{ grid-template-columns:1fr; }
+  .lp-steps{ grid-template-columns:1fr; max-width:520px; }
+  .lp-eva .praticienne-inner{ grid-template-columns:1fr; }
+  .lp-eva-photos{ margin:0 auto; }
+}
+@media (max-width:760px){
+  .lp-hero{ padding:24px 16px 44px; text-align:center; }
+  .lp-hero .eyebrow-hand{ font-size:16px; margin-bottom:10px; }
+  .lp-hero h1{ font-size:25px; }
+  .lp-hero-sub{ font-size:16px; margin:14px 0 6px; }
+  .lp-hero-text{ font-size:15.5px; }
+  .lp-header{ padding:8px 16px; }
+  .lp-header img{ height:40px; }
+  .lp-hero .hero-media{ display:none; }
+  .lp-hero-text{ margin-left:auto; margin-right:auto; }
+  .lp-section{ padding:56px 16px; }
+  .lp .btn-block-mobile{ width:100%; }
+  .lp-reconnais .problemes-grid{ grid-template-columns:1fr; }
+  .lp-offre-card{ grid-template-columns:1fr; padding:14px; }
+  .lp-offre-card::before{ inset:-8px; }
+  .lp-offre-card .ph-photo{ aspect-ratio:16/10; }
+  .lp-offre-body{ padding:4px 6px 8px; text-align:center; }
+  .lp-offre-price{ justify-content:center; }
+  .lp-eva-photos{ max-width:320px; gap:12px; }
+  .lp-contact .btn{ flex:1 1 100%; }
+  .lp-sticky{ display:block; }
+  body.lp{ padding-bottom:96px; }
+}
+
+/* Bandeau cookies tarteaucitron — accordé au site */
+#tarteaucitronRoot, #tarteaucitronRoot *{ font-family:'Outfit', sans-serif !important; }
+#tarteaucitronRoot #tarteaucitronAlertBig{
+  background:var(--blanc-casse) !important;
+  color:var(--encre) !important;
+  box-shadow:0 -10px 40px rgba(32,31,43,0.12);
+  border-top:1px solid rgba(43,38,32,0.08);
+  padding:14px 16px calc(12px + env(safe-area-inset-bottom)) !important;
+  box-sizing:border-box !important;
+}
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert,
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong{
+  color:var(--encre) !important;
+  font-size:14.5px !important;
+  line-height:1.5 !important;
+  display:block; margin-bottom:12px;
+}
+#tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronAlertBig #tarteaucitronAllDenied2,
+#tarteaucitronAlertBig #tarteaucitronCloseAlert,
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrl{
+  min-height:44px;
+  border-radius:100px !important;
+  padding:12px 22px !important;
+  font-size:14px !important;
+  font-weight:600 !important;
+  margin:4px !important;
+}
+/* Accepter et refuser ont le même poids visuel (exigence CNIL) */
+#tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronAlertBig #tarteaucitronAllDenied2{
+  background:var(--sauge-fonce) !important;
+  color:var(--blanc-casse) !important;
+  border:2px solid var(--sauge-fonce) !important;
+  min-width:140px;
+}
+#tarteaucitronRoot #tarteaucitronAlertBig button#tarteaucitronPersonalize2,
+#tarteaucitronRoot #tarteaucitronAlertBig button#tarteaucitronAllDenied2{
+  font-size:15px !important;
+  padding:12px 22px !important;
+}
+#tarteaucitronAlertBig #tarteaucitronCloseAlert,
+#tarteaucitronAlertBig #tarteaucitronPrivacyUrl{
+  background:transparent !important;
+  color:var(--encre-soft) !important;
+  border:none !important;
+  text-decoration:underline;
+}
+#tarteaucitronAlertBig .tarteaucitronCheck,
+#tarteaucitronAlertBig .tarteaucitronCross{ display:none !important; }
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine,
+#tarteaucitron #tarteaucitronInfo{ background:var(--sauge-deep2) !important; }
+#tarteaucitron #tarteaucitronClosePanel{ background:var(--sauge-deep2) !important; }
+</style>
+
+<!-- ================= CONSENTEMENT COOKIES + PIXEL META =================
+     Le pixel Meta n'est chargé qu'après acceptation, via le service
+     « facebookpixel » de tarteaucitron (qui envoie aussi le PageView). -->
+<script>
+  var tarteaucitronForceLanguage = 'fr';
+  var tarteaucitronCustomText = {
+    alertBigPrivacy: "✦ Ce site utilise des cookies pour mesurer l'efficacité de nos publicités Instagram et Facebook. Tu choisis ce que tu acceptes.",
+    info: "Protection de ta vie privée",
+    disclaimer: "En autorisant ces services, tu acceptes le dépôt et la lecture de cookies nécessaires à leur fonctionnement.",
+    noServices: "Ce site n'utilise aucun cookie nécessitant ton consentement.",
+    ads: {
+      title: "Publicité",
+      details: "Le pixel Meta nous permet de savoir si nos publicités Instagram et Facebook t'ont été utiles, et de les montrer aux bonnes personnes."
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.35.1/tarteaucitron.min.js"></script>
+<script>
+  tarteaucitron.init({
+    privacyUrl: "/politique-confidentialite",
+    bodyPosition: "top",
+    hashtag: "#tarteaucitron",
+    cookieName: "tarteaucitron",
+    orientation: "bottom",
+    groupServices: false,
+    showDetailsOnClick: true,
+    serviceDefaultState: "wait",
+    showAlertSmall: false,
+    cookieslist: false,
+    closePopup: false,
+    showIcon: false,
+    adblocker: false,
+    DenyAllCta: true,
+    AcceptAllCta: true,
+    highPrivacy: true,
+    alwaysNeedConsent: false,
+    handleBrowserDNTRequest: false,
+    removeCredit: true,
+    moreInfoLink: true,
+    useExternalCss: false,
+    useExternalJs: false,
+    readmoreLink: "/politique-confidentialite",
+    mandatory: true,
+    mandatoryCta: false,
+    googleConsentMode: false,
+    partnersList: false
+  });
+
+  tarteaucitron.user.facebookpixelId = '1765989821188212';
+  tarteaucitron.user.facebookpixelMore = function () {};
+  (tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
+</script>
+</head>
+<body class="lp">
+
+<header class="lp-header">
+  <img src="images/logo-auroe-dark.png" alt="Auroé Massage" width="160" height="48">
+</header>
+
+<main>
+
+  <!-- ================= 1. HERO ================= -->
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <div class="lp-hero-text-wrap">
+        <p class="eyebrow eyebrow-hand">✦ Massage bien-être à Signes (83)</p>
+        <h1>
+          Les épaules qui remontent, la nuque raide, des journées qui ne s'arrêtent jamais&nbsp;?
+          <span class="pill-highlight pill-blanc">Offre-toi une vraie pause.</span>
+        </h1>
+        <p class="lp-hero-sub">Nouveau à Signes · Ta première séance à 70&nbsp;€</p>
+        <p class="lp-hero-text">
+          Une heure rien que pour toi, dans un cocon calme et chaleureux, pour relâcher
+          <span class="ink-highlight ink-highlight-sauge">les tensions accumulées</span> et repartir plus léger·e.
+        </p>
+        <a href="https://www.planity.com/auroe-massage-83870-signes" target="_blank" rel="noopener"
+           class="btn btn-primary btn-block-mobile" data-cta="hero">Réserver ma première séance</a>
+        <p class="cta-note">✦ Réservation en ligne sur Planity</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="ph-photo ph-hero has-photo">
+          <img src="images/massage-decouverte.jpg" alt="Massage relaxant du dos dans le cabinet Auroé Massage" loading="lazy" width="1200" height="800">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. TU TE RECONNAIS ? ================= -->
+  <section class="lp-section lp-reconnais">
+    <div class="section-head reveal">
+      <h2>Tu te <span class="ink-circle ink-sauge">reconnais</span>&nbsp;?</h2>
+      <span class="doodle-underline"></span>
+    </div>
+
+    <div class="problemes-grid reveal">
+      <div class="probleme-card">
+        <div class="probleme-icon-badge"><svg class="probleme-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M10 30c0-8 4-14 10-14s10 6 10 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 13l3 3M7 20l3-1.5M33 13l-3 3M33 20l-3-1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <p>Tes tensions dans les épaules et la nuque sont devenues <strong>ton état normal</strong>. Tu ne les remarques même plus.</p>
+      </div>
+      <div class="probleme-card">
+        <div class="probleme-icon-badge"><svg class="probleme-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M25 7a13 13 0 1 0 8 22c-8 1-15-6-15-14a13 13 0 0 1 7-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 11h6l-6 7h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>Tu dors, mais <strong>tu ne récupères jamais vraiment</strong> : tu te réveilles aussi fatigué·e que la veille.</p>
+      </div>
+      <div class="probleme-card">
+        <div class="probleme-icon-badge"><svg class="probleme-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="9" width="28" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 16h28M12 5v8M28 5v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 25c1.5-3 8-3 9 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M25 22l2 3-3 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>Tu repousses ce massage <strong>depuis des mois</strong>, parce qu'il y a toujours quelque chose de plus urgent.</p>
+      </div>
+      <div class="probleme-card">
+        <div class="probleme-icon-badge"><svg class="probleme-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26c4-6 8-6 12 0s8 6 12 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 16c4-6 8-6 12 0s8 6 12 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
+        <p>Tu as peur de tomber sur un massage <strong>trop léger</strong>, qui effleure sans jamais vraiment relâcher quoi que ce soit.</p>
+      </div>
+    </div>
+
+    <p class="aside-hand reveal">Ici, la pression s'adapte à toi. Tu dis, j'ajuste.</p>
+  </section>
+
+  <p class="lp-sep" aria-hidden="true">✦</p>
+
+  <!-- ================= 3. MODE DÉCOUVERTE ================= -->
+  <section class="lp-section lp-offre">
+    <div class="lp-offre-card reveal">
+      <div class="ph-photo has-photo">
+        <img src="images/cabinet-auroe.jpg" alt="Le cabinet Auroé Massage à Signes, ambiance cocon" loading="lazy" width="1600" height="1302">
+      </div>
+      <div class="lp-offre-body">
+        <span class="offre-sticker">✦ Pour ta première séance</span>
+        <h2>Le Mode Découverte</h2>
+        <div class="lp-offre-price">
+          <span class="offre-price">70&nbsp;€</span>
+          <span class="offre-meta">1h de massage</span>
+        </div>
+        <p class="offre-desc">Ta toute première séance chez Auroé Massage. On prend le temps de comprendre ce dont ton corps a besoin, et je mélange les techniques adaptées pour te faire sentir la différence dès cette rencontre.</p>
+        <a href="https://www.planity.com/auroe-massage-83870-signes" target="_blank" rel="noopener"
+           class="btn btn-primary btn-block-mobile" data-cta="milieu">Réserver ma première séance</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. DÉROULÉ ================= -->
+  <section class="lp-section lp-etapes">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pas à pas</p>
+      <h2>Comment se passe ta <span class="ink-underline">première séance</span></h2>
+      <span class="doodle-underline"></span>
+    </div>
+
+    <ol class="lp-steps reveal" style="list-style:none;padding:0;margin:0 auto;">
+      <li class="lp-step">
+        <span class="lp-step-num" aria-hidden="true">1</span>
+        <h3>On échange sur tes besoins</h3>
+        <p>Quelques minutes pour parler de ta semaine, de tes tensions et de ce que tu attends de ce moment.</p>
+      </li>
+      <li class="lp-step">
+        <span class="lp-step-num" aria-hidden="true">2</span>
+        <h3>Le massage</h3>
+        <p>1h de massage, avec une pression adaptée à ton corps. Tu peux me dire à tout moment si tu veux plus ou moins fort.</p>
+      </li>
+      <li class="lp-step">
+        <span class="lp-step-num" aria-hidden="true">3</span>
+        <h3>Tu repars relâché·e</h3>
+        <p>Sans rien avoir à gérer ni à préparer. Tu n'as qu'à venir.</p>
+      </li>
+    </ol>
+  </section>
+
+  <p class="lp-sep" aria-hidden="true">✦</p>
+
+  <!-- ================= 5. EVA ================= -->
+  <section class="lp-section lp-eva">
+    <div class="praticienne-inner">
+      <div class="lp-eva-photos reveal">
+        <div class="ph-photo has-photo">
+          <img src="images/eva-en-seance.jpg" alt="Eva en séance de massage — Auroé Massage" loading="lazy" width="1179" height="2083">
+        </div>
+        <div class="ph-photo has-photo">
+          <img src="images/cabinet-auroe.jpg" alt="La salle de massage du cabinet Auroé à Signes" loading="lazy" width="1600" height="1302">
+        </div>
+      </div>
+      <div class="praticienne-text reveal">
+        <p class="eyebrow">La praticienne</p>
+        <h2>Je suis <span class="ink-circle ink-terracotta">Eva</span></h2>
+        <p>Formée à Marseille, je t'accueille dans mon cabinet à Signes (83).</p>
+        <p>Je suis partie d'une évidence simple : on peut cocher toutes les bonnes cases et quand même finir bloqué·e, parce qu'on ne s'autorise jamais de vraie pause. J'ai construit <span class="ink-highlight ink-highlight-sauge">un cocon</span> où ton corps a enfin la place de relâcher.</p>
+        <p class="signature">à très vite, <span>Eva</span> 🌿</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. AVIS GOOGLE ================= -->
+  <section class="lp-section lp-avis">
+    <div class="section-head reveal">
+      <p class="eyebrow">Avis Google ★★★★★</p>
+      <h2>Ce qu'on ressent <span class="ink-underline">après</span>.</h2>
+      <span class="doodle-underline"></span>
+    </div>
+
+    <!-- Avis Google réels, reproduits tels quels -->
+    <div class="temoignages-grid reveal">
+      <article class="temoignage-card tc-1">
+        <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+        <p class="temoignage-text">« Massage parfait pour mes tensions dans le dos, Eva a pris en compte mes besoins et est très a l'ecoute ! »</p>
+        <p class="temoignage-author">Franck P. — Avis Google</p>
+      </article>
+      <article class="temoignage-card tc-2">
+        <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+        <p class="temoignage-text">« Un vraie moment de detente. Thérapeute agréable, attentive à mon bien être. »</p>
+        <p class="temoignage-author">Patricia M. — Avis Google</p>
+      </article>
+      <article class="temoignage-card tc-3">
+        <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+        <p class="temoignage-text">« J'ai passé un très bon moment détente. Je recommande vivement. Merci encore pour ce super moment. »</p>
+        <p class="temoignage-author">Alexia D. — Avis Google</p>
+      </article>
+    </div>
+  </section>
+
+  <p class="lp-sep" aria-hidden="true">✦</p>
+
+  <!-- ================= 7. FAQ ================= -->
+  <!-- Réponses reprises de la FAQ de la page d'accueil (index.html) -->
+  <section class="lp-section lp-faq">
+    <div class="section-head reveal">
+      <p class="eyebrow">Première fois</p>
+      <h2>Tu te poses des <span class="ink-circle ink-sauge">questions</span>&nbsp;?</h2>
+      <span class="doodle-underline"></span>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment se passe une première séance&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Je t'accueille, on prend quelques minutes pour parler de ta semaine et de tes tensions,
+            puis place au massage, qui dure 1h. On termine par un temps calme et quelques conseils
+            simples pour prolonger les effets. Tu n'as rien à savoir ni à préparer.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment je m'habille, quelle tenue&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Viens simplement dans une tenue confortable.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Et l'intimité&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Pendant le massage, tu es recouvert·e d'une serviette en permanence&nbsp;: seule la zone
+            massée est découverte, dans le respect total de ton intimité.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Combien de temps ça dure&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Le massage dure 1h. Prévois quelques minutes en plus pour l'échange du début et le temps
+            calme de la fin.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Où se garer&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <!-- Repris de index.html : à confirmer -->
+          <p>Dans mon espace dédié à Signes (83). Un parking est disponible et gratuit à 30 mètres.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quels horaires&nbsp;?
+          <span class="faq-plus"></span>
+        </button>
+        <div class="faq-answer">
+          <!-- Repris de index.html : à confirmer -->
+          <p>Je masse du mardi au samedi de 10h00 à 19h00. Toutes les disponibilités sont visibles en
+            temps réel sur Planity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. CTA FINAL ================= -->
+  <section class="lp-section lp-final">
+    <div class="cta-final-inner reveal">
+      <p class="lp-sep" aria-hidden="true" style="margin-bottom:18px;">✦ ✦ ✦</p>
+      <h2>Ton corps t'attend.</h2>
+      <p class="lp-final-offer">Pour ta première séance : <strong>le Mode Découverte, 1h, 70&nbsp;€</strong>.</p>
+      <a href="https://www.planity.com/auroe-massage-83870-signes" target="_blank" rel="noopener"
+         class="btn btn-primary btn-block-mobile" data-cta="final">Réserver ma première séance</a>
+      <p class="cta-note">Réservation sécurisée et gratuite sur Planity.</p>
+
+      <div class="lp-contact">
+        <a href="tel:+33646882089" class="btn btn-ghost btn-small" data-contact="Telephone">Appeler le +33 6 46 88 20 89</a>
+        <a href="https://instagram.com/auroemassage" target="_blank" rel="noopener" class="btn btn-ghost btn-small" data-contact="Instagram">Instagram @auroemassage</a>
+      </div>
+      <p class="lp-zone">Cabinet à Signes (83), à proximité de Toulon, Brignoles et Aubagne.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="images/logo-auroe-dark.png" alt="Auroé Massage" loading="lazy"></div>
+    <p class="footer-hand">prends soin de toi 🌿</p>
+    <nav class="lp-footer-links" aria-label="Informations légales">
+      <!-- À CRÉER : ces deux pages n'existent pas encore sur le site -->
+      <a href="/mentions-legales">Mentions légales</a>
+      <a href="/politique-confidentialite">Politique de confidentialité</a>
+      <button type="button" onclick="tarteaucitron.userInterface.openPanel();">Gérer mes cookies</button>
+    </nav>
+    <p class="footer-copy">© Auroé Massage — Tous droits réservés</p>
+  </div>
+</footer>
+
+<!-- ================= BOUTON COLLANT (mobile) ================= -->
+<div class="lp-sticky" id="lpSticky" aria-hidden="true">
+  <a href="https://www.planity.com/auroe-massage-83870-signes" target="_blank" rel="noopener"
+     class="btn btn-primary" data-cta="sticky" tabindex="-1">Réserver ma première séance · 70&nbsp;€</a>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // ---------- Suivi Meta (uniquement si le pixel a été accepté) ----------
+  document.querySelectorAll('[data-cta]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Schedule', { content_name: 'Mode Decouverte', content_category: link.dataset.cta });
+      }
+    });
+  });
+  document.querySelectorAll('[data-contact]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', { content_name: link.dataset.contact });
+      }
+    });
+  });
+
+  // ---------- Bouton collant : visible quand aucun autre bouton Réserver n'est à l'écran ----------
+  (function () {
+    var sticky = document.getElementById('lpSticky');
+    var stickyLink = sticky.querySelector('a');
+    var inlineCtas = document.querySelectorAll('[data-cta="hero"], [data-cta="milieu"], [data-cta="final"]');
+    if (!('IntersectionObserver' in window)) {
+      sticky.classList.add('is-shown');
+      return;
+    }
+    var visible = new Set();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target);
+      });
+      var show = visible.size === 0;
+      sticky.classList.toggle('is-shown', show);
+      sticky.setAttribute('aria-hidden', String(!show));
+      stickyLink.tabIndex = show ? 0 : -1;
+    });
+    inlineCtas.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+</body>
+</html>
