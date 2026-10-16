@@ -238,113 +238,8 @@ body{ background:var(--creme-deep); overflow-x:clip; }
   body.lp{ padding-bottom:96px; }
 }
 
-/* Bandeau cookies tarteaucitron — accordé au site */
-#tarteaucitronRoot, #tarteaucitronRoot *{ font-family:'Outfit', sans-serif !important; }
-#tarteaucitronRoot #tarteaucitronAlertBig{
-  background:var(--blanc-casse) !important;
-  color:var(--encre) !important;
-  box-shadow:0 -10px 40px rgba(32,31,43,0.12);
-  border-top:1px solid rgba(43,38,32,0.08);
-  padding:14px 16px calc(12px + env(safe-area-inset-bottom)) !important;
-  box-sizing:border-box !important;
-}
-#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert,
-#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong{
-  color:var(--encre) !important;
-  font-size:14.5px !important;
-  line-height:1.5 !important;
-  display:block; margin-bottom:12px;
-}
-#tarteaucitronAlertBig #tarteaucitronPersonalize2,
-#tarteaucitronAlertBig #tarteaucitronAllDenied2,
-#tarteaucitronAlertBig #tarteaucitronCloseAlert,
-#tarteaucitronAlertBig #tarteaucitronPrivacyUrl{
-  min-height:44px;
-  border-radius:100px !important;
-  padding:12px 22px !important;
-  font-size:14px !important;
-  font-weight:600 !important;
-  margin:4px !important;
-}
-/* Accepter et refuser ont le même poids visuel (exigence CNIL) */
-#tarteaucitronAlertBig #tarteaucitronPersonalize2,
-#tarteaucitronAlertBig #tarteaucitronAllDenied2{
-  background:var(--sauge-fonce) !important;
-  color:var(--blanc-casse) !important;
-  border:2px solid var(--sauge-fonce) !important;
-  min-width:140px;
-}
-#tarteaucitronRoot #tarteaucitronAlertBig button#tarteaucitronPersonalize2,
-#tarteaucitronRoot #tarteaucitronAlertBig button#tarteaucitronAllDenied2{
-  font-size:15px !important;
-  padding:12px 22px !important;
-}
-#tarteaucitronAlertBig #tarteaucitronCloseAlert,
-#tarteaucitronAlertBig #tarteaucitronPrivacyUrl{
-  background:transparent !important;
-  color:var(--encre-soft) !important;
-  border:none !important;
-  text-decoration:underline;
-}
-#tarteaucitronAlertBig .tarteaucitronCheck,
-#tarteaucitronAlertBig .tarteaucitronCross{ display:none !important; }
-#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine,
-#tarteaucitron #tarteaucitronInfo{ background:var(--sauge-deep2) !important; }
-#tarteaucitron #tarteaucitronClosePanel{ background:var(--sauge-deep2) !important; }
 </style>
 
-<!-- ================= CONSENTEMENT COOKIES + PIXEL META =================
-     Le pixel Meta n'est chargé qu'après acceptation, via le service
-     « facebookpixel » de tarteaucitron (qui envoie aussi le PageView). -->
-<script>
-  var tarteaucitronForceLanguage = 'fr';
-  var tarteaucitronCustomText = {
-    alertBigPrivacy: "✦ Ce site utilise des cookies pour mesurer l'efficacité de nos publicités Instagram et Facebook. Tu choisis ce que tu acceptes.",
-    info: "Protection de ta vie privée",
-    disclaimer: "En autorisant ces services, tu acceptes le dépôt et la lecture de cookies nécessaires à leur fonctionnement.",
-    noServices: "Ce site n'utilise aucun cookie nécessitant ton consentement.",
-    ads: {
-      title: "Publicité",
-      details: "Le pixel Meta nous permet de savoir si nos publicités Instagram et Facebook t'ont été utiles, et de les montrer aux bonnes personnes."
-    }
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.35.1/tarteaucitron.min.js"></script>
-<script>
-  tarteaucitron.init({
-    privacyUrl: "/politique-confidentialite",
-    bodyPosition: "top",
-    hashtag: "#tarteaucitron",
-    cookieName: "tarteaucitron",
-    orientation: "bottom",
-    groupServices: false,
-    showDetailsOnClick: true,
-    serviceDefaultState: "wait",
-    showAlertSmall: false,
-    cookieslist: false,
-    closePopup: false,
-    showIcon: false,
-    adblocker: false,
-    DenyAllCta: true,
-    AcceptAllCta: true,
-    highPrivacy: true,
-    alwaysNeedConsent: false,
-    handleBrowserDNTRequest: false,
-    removeCredit: true,
-    moreInfoLink: true,
-    useExternalCss: false,
-    useExternalJs: false,
-    readmoreLink: "/politique-confidentialite",
-    mandatory: true,
-    mandatoryCta: false,
-    googleConsentMode: false,
-    partnersList: false
-  });
-
-  tarteaucitron.user.facebookpixelId = '1765989821188212';
-  tarteaucitron.user.facebookpixelMore = function () {};
-  (tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
-</script>
 </head>
 <body class="lp">
 
@@ -602,8 +497,8 @@ body{ background:var(--creme-deep); overflow-x:clip; }
       <p class="cta-note">Réservation sécurisée et gratuite sur Planity.</p>
 
       <div class="lp-contact">
-        <a href="tel:+33646882089" class="btn btn-ghost btn-small" data-contact="Telephone">Appeler le +33 6 46 88 20 89</a>
-        <a href="https://instagram.com/auroemassage" target="_blank" rel="noopener" class="btn btn-ghost btn-small" data-contact="Instagram">Instagram @auroemassage</a>
+        <a href="tel:+33646882089" class="btn btn-ghost btn-small">Appeler le +33 6 46 88 20 89</a>
+        <a href="https://instagram.com/auroemassage" target="_blank" rel="noopener" class="btn btn-ghost btn-small">Instagram @auroemassage</a>
       </div>
       <p class="lp-zone">Cabinet à Signes (83), à proximité de Toulon, Brignoles et Aubagne.</p>
     </div>
@@ -620,7 +515,6 @@ body{ background:var(--creme-deep); overflow-x:clip; }
       <!-- À CRÉER : ces deux pages n'existent pas encore sur le site -->
       <a href="/mentions-legales">Mentions légales</a>
       <a href="/politique-confidentialite">Politique de confidentialité</a>
-      <button type="button" onclick="tarteaucitron.userInterface.openPanel();">Gérer mes cookies</button>
     </nav>
     <p class="footer-copy">© Auroé Massage — Tous droits réservés</p>
   </div>
@@ -634,22 +528,6 @@ body{ background:var(--creme-deep); overflow-x:clip; }
 
 <script src="script.js"></script>
 <script>
-  // ---------- Suivi Meta (uniquement si le pixel a été accepté) ----------
-  document.querySelectorAll('[data-cta]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Schedule', { content_name: 'Mode Decouverte', content_category: link.dataset.cta });
-      }
-    });
-  });
-  document.querySelectorAll('[data-contact]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Contact', { content_name: link.dataset.contact });
-      }
-    });
-  });
-
   // ---------- Bouton collant : visible quand aucun autre bouton Réserver n'est à l'écran ----------
   (function () {
     var sticky = document.getElementById('lpSticky');
