@@ -246,6 +246,7 @@ a:focus-visible, button:focus-visible{
   padding:10px 20px;
 }
 .announce-bar sup{ font-size:0.7em; }
+.announce-bar a{ color:inherit; text-decoration:underline; text-underline-offset:3px; }
 
 /* ==========================================================================
    NAV
