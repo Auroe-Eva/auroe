@@ -47,13 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Toggle abonnement 6 / 12 mois ---------- */
   const toggleBtns = document.querySelectorAll('.toggle-btn');
   const subPrice = document.getElementById('subPrice');
+  const subSaving = document.getElementById('subSaving');
   const prices = { '12': '62,5€', '6': '69€' };
+  const savings = {
+    '12': '750\u00a0€ au lieu de 900\u00a0€ sur 12 mois, soit 150\u00a0€ d\'économie',
+    '6': '414\u00a0€ au lieu de 450\u00a0€ sur 6 mois, soit 36\u00a0€ d\'économie'
+  };
 
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       toggleBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
       btn.setAttribute('aria-selected', 'true');
       if (subPrice) subPrice.textContent = prices[btn.dataset.months];
+      if (subSaving) subSaving.textContent = savings[btn.dataset.months];
     });
   });
 
