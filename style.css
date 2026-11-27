@@ -328,7 +328,7 @@ a:focus-visible, button:focus-visible{
 .hero-title{
   font-size:clamp(26px,3.6vw,42px);
 }
-.hero-title .pill-highlight{ font-style:normal; }
+.hero-title .pill-highlight{ font-style:normal; margin-top:0.32em; }
 .hero-sub{
   font-size:26px;
   color:var(--encre-soft);
@@ -842,3 +842,44 @@ a:focus-visible, button:focus-visible{
   }
   .problemes-grid{ grid-template-columns:1fr; }
 }
+
+/* ==========================================================================
+   COMMENT CA SE PASSE, PREUVE, PRIX
+   ========================================================================== */
+.etapes{ background:var(--blanc-casse); padding:90px 24px; }
+.etapes-grid{
+  list-style:none;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap:22px;
+}
+.etape-card{
+  background:var(--bleu-ciel-wash);
+  border-radius:var(--radius-md);
+  padding:26px 24px;
+}
+.etape-card:nth-child(2){ background:var(--peche-wash); }
+.etape-card:nth-child(3){ background:var(--lavande-wash); }
+.etape-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px;
+  margin-bottom:12px;
+  border-radius:50%;
+  background:var(--encre);
+  color:var(--blanc-casse);
+  font-family:'Poppins', sans-serif;
+  font-weight:700;
+}
+.etape-card h3{ font-size:19px; margin:0 0 6px; }
+.etape-card p{ color:var(--encre-soft); font-size:15px; margin:0; }
+
+.hero-proof{ font-weight:600; font-size:14.5px; margin:14px 0 0; }
+.hero-proof span{ color:var(--peche-deep); letter-spacing:1px; }
+.offre-price-old{ font-size:0.72em; font-weight:600; color:var(--encre-soft); margin-right:4px; }
+.offre-saving{ font-size:13.5px; font-weight:600; margin:0 0 14px; }
+.cta-call{ margin-top:14px; }
+.footer-legal{ font-size:12.5px; margin-top:14px; }
+.footer-legal a{ color:var(--encre-soft); text-decoration:underline; }
